@@ -1,0 +1,91 @@
+@import url(https://fonts.googleapis.com/css?family=Barlow:600);
+@import url(https://fonts.googleapis.com/css?family=Fraunces:700,900);
+* {
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.ctr {
+  width: 90%;
+  margin: 0 auto;
+}
+
+header {
+  height: 100vh;
+  background: #3ebfff url(../images/desktop/image-header.jpg) center top no-repeat;
+  background-size: auto 100%;
+}
+
+#nav-ctr {
+  padding: 3rem 0;
+}
+
+#nav-ctr svg {
+  height: 1.5rem;
+}
+
+#nav-ctr a {
+  font-family: 'Barlow', san-serif;
+  color: white;
+}
+
+#nav-ctr a:hover {
+  cursor: pointer;
+  opacity: .8;
+}
+
+#nav-ctr li + li {
+  margin-left: 2rem;
+}
+
+#nav-ctr #contact {
+  font-family: 'Fraunces', sans-serif;
+  padding: .8rem 2rem;
+  background-color: white;
+  color: #23303e;
+  border-radius: 2rem;
+  -webkit-transition: background-color .5s;
+  transition: background-color .5s;
+  -webkit-box-shadow: 0 0 3px #8fa5a8;
+          box-shadow: 0 0 3px #8fa5a8;
+}
+
+#nav-ctr #contact:hover {
+  color: white;
+  background-color: #8ad8ff;
+  opacity: .8;
+}
+
+h1 {
+  font-family: 'Fraunces', sans-serif;
+  color: white;
+  text-align: center;
+  font-size: 4rem;
+  margin-top: 2rem;
+}
+
+#arrow {
+  width: 2.5rem;
+  margin: 7rem auto 0;
+}
+/*# sourceMappingURL=styles.css.map */
