@@ -36,13 +36,16 @@ img {
    margin: 0 auto;
 }
 header {
-   height: 100vh;
-   background: #3ebfff url(../images/desktop/image-header.jpg) center top no-repeat;
-   background-size: auto 100%;
+   height: 0;
+   // background: #3ebfff url(../images/desktop/image-header.jpg) center top no-repeat;
+   // background-size: auto 100%;
+   background: url(../images/mobile/image-header.jpg) center top no-repeat;
+   background-size: contain;
+   padding-bottom: 143.47%;
 }
 #nav-ctr {
-   // outline: 1px solid red;
-   padding: 3rem 0;
+   // padding: 3rem 0;
+   padding: 2rem 0;
 
    svg {
       height: 1.5rem;
@@ -69,18 +72,87 @@ header {
    }
    #contact:hover {
       color: $white;
-      background-color: #8ad8ff;
+      // background-color: #8ad8ff;
       opacity: .8;
    }
+}
+nav {
+   @media (max-width: 620px) {
+      display: none;
+   }
+}
+header button {
+   background-color: transparent;
+   border: none;
+   transition: 500ms;
+   
+   // @media (min-width: 620px) {
+      //    display: none;
+      // }
+   }
+
+header button:hover {
+   cursor: pointer;
+   transform: translateX(-5px);
 }
 h1 {
    font-family: 'Fraunces', sans-serif;
    color: $white;
    text-align: center;
-   font-size: 4rem;
-   margin-top: 2rem;
+   // font-size: 4rem;
+   // margin-top: 2rem;
+   font-size: 1.5rem;
 }
 #arrow {
-   width: 2.5rem;
-   margin: 7rem auto 0;
+   // width: 2.5rem;
+   width: 2rem;
+   margin: 5rem auto 0;
+   animation: arrowAni 2s infinite;
+}
+@keyframes arrowAni {
+   from {
+      transform: translateY(-2rem);
+   }
+   to {
+      transform: translateY(2rem);
+   }
+}
+.col-2 {
+   text-align: center;
+   padding: 2.5rem 10%;
+
+   h2, a {
+      font-size: 1.7rem;
+      font-family: 'Fraunces', sans-serif;
+      padding: 0 1rem;
+   }
+   p {
+      font-family: 'Barlow', sans-serif;
+      font-size: 1rem;
+      line-height: 1.5;
+      margin: 1.8rem 0;
+      color: $d-g-blue;
+   }
+
+   a {
+      font-size: 1rem;
+      color: #000;
+   }
+}
+.row-3, .row-4{
+   position: relative;
+}
+.row-3 .col-2, .row-4 .col-2 {
+   position: absolute;
+   bottom: 2rem;
+   padding: 0 6%;
+   
+   p, h2 {
+      color: $d-D-cyan;
+   }
+}
+.row-4 .col-2 {
+   p, h2 {
+      color: $d-blue;
+   }
 }
