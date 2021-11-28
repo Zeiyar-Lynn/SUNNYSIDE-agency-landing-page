@@ -153,7 +153,7 @@ h1 {
 
 #arrow {
   width: 2rem;
-  margin: 5rem auto 0;
+  margin: 3rem auto 0;
   -webkit-animation: arrowAni 2s infinite;
           animation: arrowAni 2s infinite;
 }
@@ -178,6 +178,21 @@ h1 {
     -webkit-transform: translateY(2rem);
             transform: translateY(2rem);
   }
+}
+
+.row-1 .col-1, .row-2 .col-1 {
+  height: 0;
+  padding-bottom: 83.2%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.row-1 .col-1 {
+  background-image: url(../images/mobile/image-transform.jpg);
+}
+
+.row-2 .col-1 {
+  background-image: url(../images/mobile/image-stand-out.jpg);
 }
 
 .col-2 {
@@ -227,34 +242,49 @@ h1 {
   opacity: 1;
 }
 
-.row-3, .row-4 {
+.col {
   position: relative;
 }
 
-.row-3 .col-2, .row-4 .col-2 {
+.row-3 .col-1 {
+  height: 0;
+  padding-top: 160%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.col-1-1 .col-1 {
+  background-image: url(../images/mobile/image-graphic-design.jpg);
+}
+
+.col-1-2 .col-1 {
+  background-image: url(../images/mobile/image-photography.jpg);
+}
+
+.col .col-2 {
   position: absolute;
   bottom: 2rem;
   padding: 0 6%;
 }
 
-.row-3 .col-2 p, .row-3 .col-2 h2, .row-4 .col-2 p, .row-4 .col-2 h2 {
+.col .col-2 p, .col .col-2 h2 {
   color: #25564b;
 }
 
-.row-4 .col-2 p, .row-4 .col-2 h2 {
+.col-1-2 .col-2 p, .col-1-2 .col-2 h2 {
   color: #19536b;
 }
 
-.row-5 {
+.row-4 {
   padding: 3rem 2rem;
   text-align: center;
 }
 
-.row-5 h3, .row-5 h2 {
+.row-4 h3, .row-4 h2 {
   font-family: 'Fraunces', sans-serif;
 }
 
-.row-5 h2 {
+.row-4 h2 {
   letter-spacing: 2px;
   color: #a7abae;
   font-size: 1.2rem;
@@ -294,7 +324,7 @@ h1 {
   font-size: 14px;
 }
 
-.row-6 {
+.row-5 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -302,8 +332,28 @@ h1 {
       flex-wrap: wrap;
 }
 
-.row-6 .img-ctr {
+.img-ctr {
   width: 50%;
+  height: 0;
+  padding-top: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.img-ctr:nth-child(1) {
+  background-image: url(../images/mobile/image-gallery-milkbottles.jpg);
+}
+
+.img-ctr:nth-child(2) {
+  background-image: url(../images/mobile/image-gallery-orange.jpg);
+}
+
+.img-ctr:nth-child(3) {
+  background-image: url(../images/mobile/image-gallery-cone.jpg);
+}
+
+.img-ctr:nth-child(4) {
+  background-image: url(../images/mobile/image-gallery-sugar-cubes.jpg);
 }
 
 footer {
@@ -361,7 +411,7 @@ footer #social-links a:hover path {
   fill: white;
 }
 
-@media (min-width: 620px) {
+@media (min-width: 770px) {
   header {
     height: 100vh;
     background-image: url(../images/desktop/image-header.jpg);
@@ -447,6 +497,90 @@ footer #social-links a:hover path {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+    padding: 0 5%;
+  }
+  .col-2 h2, .col-2 a {
+    padding: 0;
+  }
+  .col-2 h2 {
+    font-size: 2rem;
+  }
+  .col-2 p {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin: 1.5rem 0;
+  }
+  .col-2 a {
+    font-size: 1rem;
+  }
+  .row-1 .col-1, .row-2 .col-1 {
+    padding-bottom: 41.68%;
+  }
+  .row-1 .col-1 {
+    background-image: url(../images/desktop/image-transform.jpg);
+  }
+  .row-2 .col-1 {
+    background-image: url(../images/desktop/image-stand-out.jpg);
+  }
+  .row-3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .row-3 > * {
+    width: 50%;
+  }
+  .row-3 .col-1 {
+    padding-top: 83.3%;
+  }
+  .col-1-1 .col-1 {
+    background-image: url(../images/desktop/image-graphic-design.jpg);
+  }
+  .col-1-2 .col-1 {
+    background-image: url(../images/desktop/image-photography.jpg);
+  }
+  .col .col-2 {
+    text-align: center;
+    bottom: 1rem;
+    padding: 0 9%;
+  }
+  .col .col-2 h2 {
+    font-size: 1.7rem;
+  }
+  .col .col-2 p {
+    margin: 1rem 0;
+  }
+  #testimonital {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #testimonital > * {
+    width: 30%;
+  }
+  .img-ctr {
+    width: 25%;
+    padding-top: 31%;
+  }
+  .img-ctr:nth-child(1) {
+    background-image: url(../images/desktop/image-gallery-milkbottles.jpg);
+  }
+  .img-ctr:nth-child(2) {
+    background-image: url(../images/desktop/image-gallery-orange.jpg);
+  }
+  .img-ctr:nth-child(3) {
+    background-image: url(../images/desktop/image-gallery-cone.jpg);
+  }
+  .img-ctr:nth-child(4) {
+    background-image: url(../images/desktop/image-gallery-sugarcubes.jpg);
+  }
+}
+
+@media (min-width: 1240px) {
+  .col-2 {
     padding: 0 9%;
   }
   .col-2 h2, .col-2 a {
@@ -462,6 +596,22 @@ footer #social-links a:hover path {
   }
   .col-2 a {
     font-size: 1.2rem;
+  }
+  .col .col-2 {
+    bottom: 2rem;
+    padding: 0 15%;
+  }
+  .col .col-2 h2 {
+    font-size: 2rem;
+  }
+  .col .col-2 p {
+    margin: 1.5rem 0;
+  }
+  .row-4 {
+    padding: 5rem 0;
+  }
+  #testimonital {
+    padding: 0 10%;
   }
 }
 /*# sourceMappingURL=styles.css.map */
